@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SNT</title>
+    <link rel="stylesheet" href="/asset/main.css" />
+    <link rel="stylesheet" href="/asset/style.css" />
+    <link rel="stylesheet" href="/asset/fonts/fonts.css" />
+    <link rel="stylesheet" href="/asset/compoents/nouislider.min.css" />
+    <link rel="stylesheet" href="/asset/compoents/rangesliderAlone.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__logo">
+            <img src="/asset/img/logo.png" alt="logo" />
+          </div>
+          <!-- <div class="header__nav"> -->
+          <nav class="nav" data-nav>
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="#">О комплексе</a>
+              </li>
+              <li class="nav-item">
+                <a href="#">Окружение</a>
+              </li>
+              <li class="nav-item">
+                <a href="#">Преимущества</a>
+              </li>
+              <li class="nav-item">
+                <a href="#">Квартиры</a>
+              </li>
+              <li class="nav-item">
+                <a href="#">Контакты</a>
+              </li>
+              <li class="nav-item nav-item--else">
+                Ещё <img src="/asset/img/icons/elseHeader.svg" />
+              </li>
+            </ul>
+          </nav>
+          <!-- </div> -->
+          <div class="header__contact">
+            <div class="header__contact-item">
+              <img src="/asset/img/icons/whatsupIcon.svg" alt="WU" />
+            </div>
+            <div class="header__contact-item">
+              <img src="/asset/img/icons/telegramIcon.svg" alt="TG" />
+            </div>
+            <div class="header__contact-item">+7 (4872) 25-37-77</div>
+            <button
+              class="burger"
+              data-burger
+              aria-label="Открыть меню"
+              aria-expanded="false"
+            >
+              <span class="burger__line"></span>
+            </button>
+          </div>
+        </div>
+      </header>
+      <section class="start-page">
+        <div class="start-banner">
+          <div class="container">
+            <div class="banner-left">
+              <h1 class="banner-left--title">МЖК «Новая Тула»</h1>
+              <br />
+              <h2 class="banner-left--subtitle">на калужском</h2>
+              <br />
+              <div class="banner-left--way">
+                <span class="circle"></span>
+                До центра города
+                <span class="car-time">
+                  <img src="/asset/img/icons/carIcon.svg" alt="carIcon" />
+                  15 мин.
+                </span>
+              </div>
+            </div>
+            <div class="banner-right">
+              <div class="banner-right--title">
+                <img src="/asset/img/icons/keyIcon.svg" alt="key" />
+                Дата заселения
+              </div>
+              <br />
+              <div class="banner-right--date">
+                <span class="number">3</span>
+                квартал
+                <span class="number">2023</span>
+                года
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="start-info">
+          <div class="container">
+            <div class="info-left">
+              <div class="info-item">
+                <span class="info-item--title">Стоимость</span>
+                <br />
+                <span class="info-item--content">от 2.8 млн. ₽</span>
+              </div>
+              <div class="info-item">
+                <span class="info-item--title">Площадь</span>
+                <br />
+                <span class="info-item--content">30- 92 м2</span>
+              </div>
+              <div class="info-item">
+                <span class="info-item--title">Ипотека</span>
+                <br />
+                <span class="info-item--content">от 3%</span>
+              </div>
+              <div class="info-item">
+                <span class="info-item--title">Срок сдачи</span>
+                <br />
+                <span class="info-item--content">3 кв. 2023</span>
+              </div>
+            </div>
+            <div class="info-right">
+              <button class="info-button--light">Получить консультацию</button>
+              <button class="info-button--green">Выбрать квартиру</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="paradise">
+        <div class="container">
+          <div class="paradise-info">
+            <div class="paradise-info--top">
+              <h2 class="paradise-title">Экология, гармония и комфорт</h2>
+              <div class="paradise-description">
+                Экологически чистый район в 15 минутах от центра города.
+                Идеальное место для семей с детьми и тех, кто хочет жить с
+                комфортом вдали от городского шума. Здесь вы сможете насладиться
+                природой и успокоительной атмосферой, не отказываясь от удобств
+                городской жизни.
+              </div>
+            </div>
+            <div class="paradise-info--filters">
+              <div class="paradise-checkdata">
+                <span class="filters-title">Дата заселения</span>
+                <br />
+                <div class="checkdata-switch switch">
+                  <div class="switch-item">
+                    <span>2 кв. 2023</span>
+                  </div>
+                  <div class="switch-item">
+                    <span>1 кв. 2025</span>
+                  </div>
+                </div>
+              </div>
+              <div></div>
+              <div class="paradise-rooms">
+                <span class="filters-title">Кол-во комнат</span>
+                <br />
+                <div class="rooms-switch switch">
+                  <div class="switch-item"><span>1</span></div>
+                  <div class="switch-item"><span>2</span></div>
+                  <div class="switch-item"><span>3</span></div>
+                </div>
+              </div>
+              <div class="paradise-range">
+                <span class="filters-title">Стоимость, млн ₽</span>
+                <br />
+                <div class="range">
+                  <div class="filters__item filters-price">
+                    <!-- <h3 class="filters-price__title">Цена</h3> -->
+
+                    <div class="filters-price__inputs">
+                      <label class="filters-price__label">
+                        <!-- <span class="filters-price__text">от</span> -->
+                        <input
+                          type="number"
+                          min="500"
+                          max="999999"
+                          placeholder="500"
+                          class="filters-price__input"
+                          id="input-0--paradise"
+                        />
+                        <!-- <span class="filters-price__text">₽</span> -->
+                      </label>
+                      <label class="filters-price__label">
+                        <!-- <span class="filters-price__text">до</span> -->
+                        <input
+                          type="number"
+                          min="500"
+                          max="999999"
+                          placeholder="999999"
+                          class="filters-price__input"
+                          id="input-1--paradise"
+                        />
+                        <!-- <span class="filters-price__text">₽</span> -->
+                      </label>
+                    </div>
+                    <div
+                      class="filters-price__slider"
+                      id="range-slider--paradise"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <button class="filters-button">Смотреть 15 предложений</button>
+            </div>
+          </div>
+          <div class="paradise-slider swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img
+                  class="slide-img"
+                  src="/asset/img/slider-ecology.png"
+                  alt="slideImg"
+                />
+              </div>
+
+              <div class="swiper-slide">
+                <img
+                  class="slide-img"
+                  src="/asset/img/slider-ecology.png"
+                  alt="slideImg"
+                />
+              </div>
+
+              <div class="swiper-slide">
+                <img
+                  class="slide-img"
+                  src="/asset/img/slider-ecology.png"
+                  alt="slideImg"
+                />
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination--paradise"></div>
+
+            <!-- If we need navigation buttons -->
+            <!-- <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div> -->
+
+            <!-- If we need scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+          </div>
+        </div>
+      </section>
+      <section class="map">
+        <div class="container">
+          <h2 class="map-title section-title">Окружение и инфраструктура</h2>
+          Тут карта
+        </div>
+      </section>
+
+      <section class="forlife">
+        <div class="container">
+          <h2 class="forlife-title section-title">Пространство для жизни</h2>
+          <!-- <div class="swiper forlife-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              
+            </div>
+            
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-slide">Slide 9</div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div> -->
+
+          <div class="forlife-scroll">
+            <div class="forlife-slider-container">
+              <div class="forlife-slide">
+                <img src="/asset/img/house-for-life.png" alt="forlife" />
+                <div class="forlife-slide--text">
+                  <h3>Экология и комфорт</h3>
+                  <span>Совмещение городской жизни и спокойствия природы.</span>
+                </div>
+              </div>
+              <div class="forlife-slide">
+                <img src="/asset/img/house-for-life.png" alt="forlife" />
+                <div class="forlife-slide--text">
+                  <h3>Экология и комфорт</h3>
+                  <span>Совмещение городской жизни и спокойствия природы.</span>
+                </div>
+              </div>
+              <div class="forlife-slide">
+                <img src="/asset/img/house-for-life.png" alt="forlife" />
+                <div class="forlife-slide--text">
+                  <h3>Экология и комфорт</h3>
+                  <span>Совмещение городской жизни и спокойствия природы.</span>
+                </div>
+              </div>
+              <div class="forlife-slide">
+                <img src="/asset/img/house-for-life.png" alt="forlife" />
+                <div class="forlife-slide--text">
+                  <h3>Экология и комфорт</h3>
+                  <span>Совмещение городской жизни и спокойствия природы.</span>
+                </div>
+              </div>
+              <div class="forlife-slide">
+                <img src="/asset/img/house-for-life.png" alt="forlife" />
+                <div class="forlife-slide--text">
+                  <h3>Экология и комфорт</h3>
+                  <span>Совмещение городской жизни и спокойствия природы.</span>
+                </div>
+              </div>
+              <div class="forlife-slide">
+                <img src="/asset/img/house-for-life.png" alt="forlife" />
+                <div class="forlife-slide--text">
+                  <h3>Экология и комфорт</h3>
+                  <span>Совмещение городской жизни и спокойствия природы.</span>
+                </div>
+              </div>
+              <div class="forlife-slide">
+                <img src="/asset/img/house-for-life.png" alt="forlife" />
+                <div class="forlife-slide--text">
+                  <h3>Экология и комфорт</h3>
+                  <span>Совмещение городской жизни и спокойствия природы.</span>
+                </div>
+              </div>
+              <div class="forlife-slide">
+                <img src="/asset/img/house-for-life.png" alt="forlife" />
+                <div class="forlife-slide--text">
+                  <h3>Экология и комфорт</h3>
+                  <span>Совмещение городской жизни и спокойствия природы.</span>
+                </div>
+              </div>
+              <div class="forlife-slide">
+                <img src="/asset/img/house-for-life.png" alt="forlife" />
+                <div class="forlife-slide--text">
+                  <h3>Экология и комфорт</h3>
+                  <span>Совмещение городской жизни и спокойствия природы.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="geoplan">
+        <div class="container">
+          <h2 class="geoplan-title section-title">Общий геоплан</h2>
+          <div class="geoplan-content">Тут свг карты</div>
+        </div>
+      </section>
+      <section class="plan">
+        <div class="container">
+          <h2 class="plan-title section-title">Планировка</h2>
+          <div class="plan-filters">
+            <div class="paradise-rooms">
+              <span class="filters-title">Кол-во комнат</span>
+              <br />
+              <div class="rooms-switch switch">
+                <div class="switch-item"><span>1</span></div>
+                <div class="switch-item"><span>2</span></div>
+                <div class="switch-item"><span>3</span></div>
+              </div>
+            </div>
+            <div class="plan-range--cost">
+              <span class="filters-title">Стоимость, млн ₽</span>
+              <br />
+              <div class="range">
+                <div class="filters__item filters-price">
+                  <!-- <h3 class="filters-price__title">Цена</h3> -->
+
+                  <div class="filters-price__inputs">
+                    <label class="filters-price__label">
+                      <!-- <span class="filters-price__text">от</span> -->
+                      <input
+                        type="number"
+                        min="500"
+                        max="999999"
+                        placeholder="500"
+                        class="filters-price__input"
+                        id="input-0--plancost"
+                      />
+                      <!-- <span class="filters-price__text">₽</span> -->
+                    </label>
+                    <label class="filters-price__label">
+                      <!-- <span class="filters-price__text">до</span> -->
+                      <input
+                        type="number"
+                        min="500"
+                        max="999999"
+                        placeholder="999999"
+                        class="filters-price__input"
+                        id="input-1--plancost"
+                      />
+                      <!-- <span class="filters-price__text">₽</span> -->
+                    </label>
+                  </div>
+                  <div
+                    class="filters-price__slider"
+                    id="range-slider--plancost"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="plan-range--square">
+              <span class="filters-title">Площадь, м2 </span>
+              <br />
+              <div class="range">
+                <div class="filters__item filters-price">
+                  <!-- <h3 class="filters-price__title">Цена</h3> -->
+
+                  <div class="filters-price__inputs">
+                    <label class="filters-price__label">
+                      <!-- <span class="filters-price__text">от</span> -->
+                      <input
+                        type="number"
+                        min="500"
+                        max="999999"
+                        placeholder="500"
+                        class="filters-price__input"
+                        id="input-0--plansquare"
+                      />
+                      <!-- <span class="filters-price__text">₽</span> -->
+                    </label>
+                    <label class="filters-price__label">
+                      <!-- <span class="filters-price__text">до</span> -->
+                      <input
+                        type="number"
+                        min="500"
+                        max="999999"
+                        placeholder="999999"
+                        class="filters-price__input"
+                        id="input-1--plansquare"
+                      />
+                      <!-- <span class="filters-price__text">₽</span> -->
+                    </label>
+                  </div>
+                  <div
+                    class="filters-price__slider"
+                    id="range-slider--plansquare"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="plan-content">
+            <div class="plan-switch--scrooll">
+              <div class="plan-switch--dots switch">
+                <div key-content="1" class="switch-item">
+                  <img src="/asset/img/plan-room.png" alt="plan" />
+                  <br />
+                  <span>66 м2</span>
+                </div>
+                <div key-content="2" class="switch-item">
+                  <img src="/asset/img/plan-room.png" alt="" />
+                  <br />
+                  <span>66 м2</span>
+                </div>
+                <div key-content="3" class="switch-item">
+                  <img src="/asset/img/plan-room.png" alt="" />
+                  <br />
+                  <span>66 м2</span>
+                </div>
+                <div key-content="4" class="switch-item">
+                  <img src="/asset/img/plan-room.png" alt="" />
+                  <br />
+                  <span>66 м2</span>
+                </div>
+                <div key-content="5" class="switch-item">
+                  <img src="/asset/img/plan-room.png" alt="" />
+                  <br />
+                  <span>66 м2</span>
+                </div>
+                <div key-content="6" class="switch-item">
+                  <img src="/asset/img/plan-room.png" alt="" />
+                  <br />
+                  <span>66 м2</span>
+                </div>
+                <div key-content="7" class="switch-item">
+                  <img src="/asset/img/plan-room.png" alt="" />
+                  <br />
+                  <span>66 м2</span>
+                </div>
+                <div key-content="8" class="switch-item">
+                  <img src="/asset/img/plan-room.png" alt="" />
+                  <br />
+                  <span>66 м2</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="plan-switch--content">
+              <div data-content="1" class="card plan-card">
+                <img
+                  class="card-img"
+                  src="asset/img/plan-room.png"
+                  alt="plan"
+                />
+                <div class="card-description">
+                  <div class="description--left">
+                    <div class="description-item">
+                      <div class="description-title">Дом</div>
+                      <div class="description-text">1,2,3</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Корп.</div>
+                      <div class="description-text">1,2</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Этаж</div>
+                      <div class="description-text">1,2,3,4,5</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Площадь, м2</div>
+                      <div class="description-text">от 66</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Стоимость, млн ₽</div>
+                      <div class="description-text">от 6,8</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Ипотека, ₽/мес.</div>
+                      <div class="description-text">от 24 766</div>
+                    </div>
+                  </div>
+
+                  <div class="description-button">
+                    <span>11 Квартир</span>
+                    <img src="/asset/img/icons/seeAll.svg" alt="seeAll" />
+                  </div>
+                </div>
+                <img
+                  class="card-compas"
+                  src="/asset/img/icons/Виджет компас 1.svg"
+                  alt=""
+                />
+              </div>
+              <div data-content="2" class="card plan-card">
+                <img
+                  class="card-img"
+                  src="asset/img/plan-room.png"
+                  alt="plan"
+                />
+                <div class="card-description">
+                  <div class="description--left">
+                    <div class="description-item">
+                      <div class="description-title">Дом</div>
+                      <div class="description-text">1,2,3</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Корп.</div>
+                      <div class="description-text">1,2</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Этаж</div>
+                      <div class="description-text">1,2,3,4,5</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Площадь, м2</div>
+                      <div class="description-text">от 66</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Стоимость, млн ₽</div>
+                      <div class="description-text">от 6,8</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Ипотека, ₽/мес.</div>
+                      <div class="description-text">от 24 766</div>
+                    </div>
+                  </div>
+
+                  <div class="description-button">
+                    <span>12 Квартир</span>
+                    <img src="/asset/img/icons/seeAll.svg" alt="seeAll" />
+                  </div>
+                </div>
+                <img
+                  class="card-compas"
+                  src="/asset/img/icons/Виджет компас 1.svg"
+                  alt=""
+                />
+              </div>
+              <div data-content="3" class="card plan-card">
+                <img
+                  class="card-img"
+                  src="asset/img/plan-room.png"
+                  alt="plan"
+                />
+                <div class="card-description">
+                  <div class="description--left">
+                    <div class="description-item">
+                      <div class="description-title">Дом</div>
+                      <div class="description-text">1,2,3</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Корп.</div>
+                      <div class="description-text">1,2</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Этаж</div>
+                      <div class="description-text">1,2,3,4,5</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Площадь, м2</div>
+                      <div class="description-text">от 66</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Стоимость, млн ₽</div>
+                      <div class="description-text">от 6,8</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Ипотека, ₽/мес.</div>
+                      <div class="description-text">от 24 766</div>
+                    </div>
+                  </div>
+
+                  <div class="description-button">
+                    <span>13 Квартир</span>
+                    <img src="/asset/img/icons/seeAll.svg" alt="seeAll" />
+                  </div>
+                </div>
+                <img
+                  class="card-compas"
+                  src="/asset/img/icons/Виджет компас 1.svg"
+                  alt=""
+                />
+              </div>
+              <div data-content="4" class="card plan-card">
+                <img
+                  class="card-img"
+                  src="asset/img/plan-room.png"
+                  alt="plan"
+                />
+                <div class="card-description">
+                  <div class="description--left">
+                    <div class="description-item">
+                      <div class="description-title">Дом</div>
+                      <div class="description-text">1,2,3</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Корп.</div>
+                      <div class="description-text">1,2</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Этаж</div>
+                      <div class="description-text">1,2,3,4,5</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Площадь, м2</div>
+                      <div class="description-text">от 66</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Стоимость, млн ₽</div>
+                      <div class="description-text">от 6,8</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Ипотека, ₽/мес.</div>
+                      <div class="description-text">от 24 766</div>
+                    </div>
+                  </div>
+
+                  <div class="description-button">
+                    <span>14 Квартир</span>
+                    <img src="/asset/img/icons/seeAll.svg" alt="seeAll" />
+                  </div>
+                </div>
+                <img
+                  class="card-compas"
+                  src="/asset/img/icons/Виджет компас 1.svg"
+                  alt=""
+                />
+              </div>
+              <div data-content="5" class="card plan-card">
+                <img
+                  class="card-img"
+                  src="asset/img/plan-room.png"
+                  alt="plan"
+                />
+                <div class="card-description">
+                  <div class="description--left">
+                    <div class="description-item">
+                      <div class="description-title">Дом</div>
+                      <div class="description-text">1,2,3</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Корп.</div>
+                      <div class="description-text">1,2</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Этаж</div>
+                      <div class="description-text">1,2,3,4,5</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Площадь, м2</div>
+                      <div class="description-text">от 66</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Стоимость, млн ₽</div>
+                      <div class="description-text">от 6,8</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Ипотека, ₽/мес.</div>
+                      <div class="description-text">от 24 766</div>
+                    </div>
+                  </div>
+
+                  <div class="description-button">
+                    <span>15 Квартир</span>
+                    <img src="/asset/img/icons/seeAll.svg" alt="seeAll" />
+                  </div>
+                </div>
+                <img
+                  class="card-compas"
+                  src="/asset/img/icons/Виджет компас 1.svg"
+                  alt=""
+                />
+              </div>
+              <div data-content="6" class="card plan-card">
+                <img
+                  class="card-img"
+                  src="asset/img/plan-room.png"
+                  alt="plan"
+                />
+                <div class="card-description">
+                  <div class="description--left">
+                    <div class="description-item">
+                      <div class="description-title">Дом</div>
+                      <div class="description-text">1,2,3</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Корп.</div>
+                      <div class="description-text">1,2</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Этаж</div>
+                      <div class="description-text">1,2,3,4,5</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Площадь, м2</div>
+                      <div class="description-text">от 66</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Стоимость, млн ₽</div>
+                      <div class="description-text">от 6,8</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Ипотека, ₽/мес.</div>
+                      <div class="description-text">от 24 766</div>
+                    </div>
+                  </div>
+
+                  <div class="description-button">
+                    <span>16 Квартир</span>
+                    <img src="/asset/img/icons/seeAll.svg" alt="seeAll" />
+                  </div>
+                </div>
+                <img
+                  class="card-compas"
+                  src="/asset/img/icons/Виджет компас 1.svg"
+                  alt=""
+                />
+              </div>
+              <div data-content="7" class="card plan-card">
+                <img
+                  class="card-img"
+                  src="asset/img/plan-room.png"
+                  alt="plan"
+                />
+                <div class="card-description">
+                  <div class="description--left">
+                    <div class="description-item">
+                      <div class="description-title">Дом</div>
+                      <div class="description-text">1,2,3</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Корп.</div>
+                      <div class="description-text">1,2</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Этаж</div>
+                      <div class="description-text">1,2,3,4,5</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Площадь, м2</div>
+                      <div class="description-text">от 66</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Стоимость, млн ₽</div>
+                      <div class="description-text">от 6,8</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Ипотека, ₽/мес.</div>
+                      <div class="description-text">от 24 766</div>
+                    </div>
+                  </div>
+
+                  <div class="description-button">
+                    <span>17 Квартир</span>
+                    <img src="/asset/img/icons/seeAll.svg" alt="seeAll" />
+                  </div>
+                </div>
+                <img
+                  class="card-compas"
+                  src="/asset/img/icons/Виджет компас 1.svg"
+                  alt=""
+                />
+              </div>
+              <div data-content="8" class="card plan-card">
+                <img
+                  class="card-img"
+                  src="asset/img/plan-room.png"
+                  alt="plan"
+                />
+                <div class="card-description">
+                  <div class="description--left">
+                    <div class="description-item">
+                      <div class="description-title">Дом</div>
+                      <div class="description-text">1,2,3</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Корп.</div>
+                      <div class="description-text">1,2</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Этаж</div>
+                      <div class="description-text">1,2,3,4,5</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Площадь, м2</div>
+                      <div class="description-text">от 66</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Стоимость, млн ₽</div>
+                      <div class="description-text">от 6,8</div>
+                    </div>
+                    <div class="description-item">
+                      <div class="description-title">Ипотека, ₽/мес.</div>
+                      <div class="description-text">от 24 766</div>
+                    </div>
+                  </div>
+
+                  <div class="description-button">
+                    <span>18 Квартир</span>
+                    <img src="/asset/img/icons/seeAll.svg" alt="seeAll" />
+                  </div>
+                </div>
+                <img
+                  class="card-compas"
+                  src="/asset/img/icons/Виджет компас 1.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="marketing">
+        <div class="container">
+          <div class="marketing-block">
+            <h2>Паркинг</h2>
+            <h3>Бесплатно</h3>
+            <div class="marketing-description">Парковка вне двора</div>
+            <img
+              class="marketing-img"
+              src="/asset/img/marketing-1.png"
+              alt="car"
+            />
+          </div>
+          <div class="marketing-block">
+            <h2>Паркинг</h2>
+            <h3>от 170 000 ₽</h3>
+            <div class="marketing-description">
+              Идейные соображения высшего порядка, а также новая модель
+              организационной деятельности
+            </div>
+
+            <button class="marketing-button">
+              Смотреть <span>13 кладовых</span>
+            </button>
+            <img
+              class="marketing-img"
+              src="/asset/img/marketing-2.png"
+              alt="bicycle"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="credit">
+        <div class="container">
+          <h2 class="credit-title section-title">Рассчитайте ипотеку</h2>
+          <div class="credit-content">
+            <div class="credit-calculator">
+              <div class="credit-calculator__title">
+                <span>Параметры кредитования</span>
+                <img src="/asset/img/icons/reloadIcon.svg" alt="" />
+              </div>
+              <div class="credit-calculator__ranges">
+                <div class="credit-calculator__ranges-cost">
+                  <div class="credit-calculator__ranges-title">
+                    Стоимость недвижимости
+                  </div>
+                  <form class="range--credit__cost range__alone">
+                    <div class="form-group range__value">
+                      <!-- <label>Loan Amount</label> -->
+                      <span></span>
+                    </div>
+                    <!--/form-group-->
+                    <div class="form-group range__slider">
+                      <input type="range" step="100000" />
+                    </div>
+                    <!--/form-group-->
+                  </form>
+                </div>
+                <div class="credit-calculator__ranges-initial">
+                  <div class="credit-calculator__ranges-title">
+                    Первоначальный взнос
+                  </div>
+                  <form class="range--credit__initial range__alone">
+                    <div class="form-group range__value">
+                      <!-- <label>Loan Amount</label> -->
+                      <span></span>
+                    </div>
+                    <!--/form-group-->
+                    <div class="form-group range__slider">
+                      <input type="range" step="100" />
+                    </div>
+                    <!--/form-group-->
+                  </form>
+                </div>
+                <div class="credit-calculator__ranges-term">
+                  <div class="credit-calculator__ranges-title">
+                    Срок ипотеки
+                  </div>
+                  <form class="range--credit__term range__alone">
+                    <div class="form-group range__value">
+                      <!-- <label>Loan Amount</label> -->
+                      <span></span>
+                    </div>
+                    <!--/form-group-->
+                    <div class="form-group range__slider">
+                      <input type="range" step="1" />
+                    </div>
+                    <!--/form-group-->
+                  </form>
+                </div>
+              </div>
+              <div class="credit-calculator__button">Подать заявку</div>
+              <div class="credit-calculator__underbutton">
+                Данный расчет приведен для общей информации и не является
+                публичной офертой
+              </div>
+            </div>
+            <div class="credit-offer">
+              <div class="credit-offer__title"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="progress">
+        <div class="container">
+          <h2 class="progress-title section-title">
+            Прогресс строительства
+            <span>70%</span>
+          </h2>
+
+          <!-- <div class="progress-points"> -->
+          <div class="progress-points">
+            <!-- <span class="filters-title">Кол-во комнат</span> -->
+            <!-- <br /> -->
+            <div class="progress-switch switch">
+              <div key-content="1" class="switch-item">
+                <span>Дом 1 корп. 1</span>
+              </div>
+              <div key-content="2" class="switch-item">
+                <span>Дом 1 корп. 2</span>
+              </div>
+              <div key-content="3" class="switch-item">
+                <span>Дом 2 корп. 1</span>
+              </div>
+              <div key-content="4" class="switch-item">
+                <span>Дом 2 корп. 2</span>
+              </div>
+              <div key-content="5" class="switch-item">
+                <span>Дом 3 корп. 1</span>
+              </div>
+              <div key-content="6" class="switch-item">
+                <span>Дом 3 корп. 2</span>
+              </div>
+            </div>
+            <!-- </div> -->
+          </div>
+          <div class="progress-scrooll">
+            <div data-content="1" class="progress-content">
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">1 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">1 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">1 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">1 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">1 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">1 Марта <br />2023 г.</div>
+              </div>
+            </div>
+            <div data-content="2" class="progress-content">
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">2 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">2 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">2 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">1 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">1 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">1 Марта <br />2023 г.</div>
+              </div>
+            </div>
+            <div data-content="3" class="progress-content">
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">3 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">3 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">3 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">1 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">1 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">1 Марта <br />2023 г.</div>
+              </div>
+            </div>
+            <div data-content="4" class="progress-content">
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">4 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">4 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">4 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">1 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">1 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">1 Марта <br />2023 г.</div>
+              </div>
+            </div>
+            <div data-content="5" class="progress-content">
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">5 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">5 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">5 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">1 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">1 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">1 Марта <br />2023 г.</div>
+              </div>
+            </div>
+            <div data-content="6" class="progress-content">
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">6 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">6 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">6 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">1 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">1 Марта <br />2023 г.</div>
+              </div>
+              <div class="card-progress">
+                <img src="/asset/img/card-progress.png" alt="" />
+                <div class="card-progress__text">1 Марта <br />2023 г.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="news">
+        <div class="container">
+          <div class="news-title--ctn">
+            <h2 class="news-title section-title">Новости и акции</h2>
+            <div class="news-title--btn">
+              Смотреть все <img src="/asset/img/icons/seeAll.svg" alt="arrow" />
+            </div>
+          </div>
+          <div class="news-content--scrooll">
+            <div class="news-content">
+              <div class="news-card">
+                <h3>Беспроцентная рассрочка до сдачи объекта!</h3>
+                <div class="news-card--description">
+                  <span>Рассрочка 0% на квартиры в ЖК «Новая Тула».</span>
+                  <br />
+                  <div class="news-card--buttons">
+                    <button>Акции</button>
+                    <button>21.02.2022</button>
+                  </div>
+                </div>
+                <img src="/asset/img/news-card.png" alt="news" />
+              </div>
+              <div class="news-card">
+                <h3>Беспроцентная рассрочка до сдачи объекта!</h3>
+                <div class="news-card--description">
+                  <span>Рассрочка 0% на квартиры в ЖК «Новая Тула».</span>
+                  <br />
+                  <div class="news-card--buttons">
+                    <button>Акции</button>
+                    <button>21.02.2022</button>
+                  </div>
+                </div>
+                <img src="/asset/img/news-card.png" alt="news" />
+              </div>
+              <div class="news-card">
+                <h3>Беспроцентная рассрочка до сдачи объекта!</h3>
+                <div class="news-card--description">
+                  <span>Рассрочка 0% на квартиры в ЖК «Новая Тула».</span>
+                  <br />
+                  <div class="news-card--buttons">
+                    <button>Акции</button>
+                    <button>21.02.2022</button>
+                  </div>
+                </div>
+                <img src="/asset/img/news-card.png" alt="news" />
+              </div>
+              <div class="news-card">
+                <h3>Беспроцентная рассрочка до сдачи объекта!</h3>
+                <div class="news-card--description">
+                  <span>Рассрочка 0% на квартиры в ЖК «Новая Тула».</span>
+                  <br />
+                  <div class="news-card--buttons">
+                    <button>Акции</button>
+                    <button>21.02.2022</button>
+                  </div>
+                </div>
+                <img src="/asset/img/news-card.png" alt="news" />
+              </div>
+              <div class="news-card">
+                <h3>Беспроцентная рассрочка до сдачи объекта!</h3>
+                <div class="news-card--description">
+                  <span>Рассрочка 0% на квартиры в ЖК «Новая Тула».</span>
+                  <br />
+                  <div class="news-card--buttons">
+                    <button>Акции</button>
+                    <button>21.02.2022</button>
+                  </div>
+                </div>
+                <img src="/asset/img/news-card.png" alt="news" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="conacts">
+        <div class="container">
+          <h2 class="conacts-title section-title">Офис продаж</h2>
+          <div class="conacts-content">тут карта</div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-info">
+            <h2>У вас остались вопросы?</h2>
+            <span>
+              Оставьте ваши данные, наш менеджер свяжется с вами в ближайшее
+              время.
+            </span>
+          </div>
+          <div class="footer-feedback">
+            <form action="">
+              <input placeholder="+7 ХХХ ХХХ ХХ ХХ" type="text" />
+              <button type="submit">
+                <img src="/asset/img/icons/sendPlaneIcon.svg" alt="" />
+              </button>
+            </form>
+            <span class="feedback-text">
+              Нажимая на кнопку, вы принимаете политику конфиденциальности и
+              даете согласие на обработку персональных данных
+            </span>
+          </div>
+          <div class="footer-line"></div>
+          <div class="footer-contact">
+            <div class="contact-number">
+              +7 (4872) 25-37-77 <br />
+              market@3snt.ru
+            </div>
+            <br />
+            <div class="contact-address">
+              Тула <br />
+              ул. Благовещенская, д. 6
+            </div>
+            <br />
+            <div class="contact-politic">Политика конфиденциальности</div>
+          </div>
+          <div class="footer-social">
+            <div class="social-title">© 2022, 3SNT GROUP</div>
+            <br />
+            <div class="social-networks">
+              <img src="/asset/img/footer_vk.png" alt="vk" />
+              <img
+                src="/asset/img/footer_odnoclassniki.png"
+                alt="odnoclassniki"
+              />
+              <img src="/asset/img/footer_telegram.png" alt="telegram" />
+              <img src="/asset/img/footer_youtube.png" alt="youtube" />
+            </div>
+            <br />
+            <span>Все права защищены</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="/asset/compoents/nouislider.min.js"></script>
+    <script src="/asset/compoents/rangesliderAlone.js"></script>
+    <script src="/asset/app.js"></script>
+  </body>
+</html>
