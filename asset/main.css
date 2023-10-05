@@ -849,6 +849,7 @@
 .plan-switch--scrooll {
   width: 40%;
   overflow: auto;
+  background-color: #fff;
 }
 .plan-switch--dots {
   /* width: fit-content;
@@ -856,7 +857,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
-  background-color: #fff;
+ 
   padding: 32px;
   border-radius: 10px;
   max-height: 416px;
@@ -1414,7 +1415,8 @@
   padding: 21px 32px;
   padding-right: 70px;
   border-radius: 8px;
-  border-color: #a6b1b9;
+  
+  border: 2px solid #a6b1b9;
 }
 
 .footer-feedback button {

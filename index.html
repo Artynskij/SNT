@@ -250,7 +250,9 @@
       <section class="map">
         <div class="container">
           <h2 class="map-title section-title">Окружение и инфраструктура</h2>
-          Тут карта
+          <div class="map-content">
+            <div id="map-one"></div>
+          </div>
         </div>
       </section>
 
@@ -275,7 +277,7 @@
           <div class="swiper-pagination"></div>
         </div> -->
 
-          <div class="forlife-scroll">
+          <div id="horizontal-scroller" class="forlife-scroll">
             <div class="forlife-slider-container">
               <div class="forlife-slide">
                 <img src="./asset/img/house-for-life.png" alt="forlife" />
@@ -990,7 +992,7 @@
             </div>
             <!-- </div> -->
           </div>
-          <div class="progress-scrooll">
+          <div id="horizontal-scroller2" class="progress-scrooll">
             <div data-content="1" class="progress-content">
               <div class="card-progress">
                 <img src="./asset/img/card-progress.png" alt="" />
@@ -1155,10 +1157,11 @@
           <div class="news-title--ctn">
             <h2 class="news-title section-title">Новости и акции</h2>
             <div class="news-title--btn">
-              Смотреть все <img src="./asset/img/icons/seeAll.svg" alt="arrow" />
+              Смотреть все
+              <img src="./asset/img/icons/seeAll.svg" alt="arrow" />
             </div>
           </div>
-          <div class="news-content--scrooll">
+          <div id="horizontal-scroller3" class="news-content--scrooll">
             <div class="news-content">
               <div class="news-card">
                 <h3>Беспроцентная рассрочка до сдачи объекта!</h3>
@@ -1283,7 +1286,10 @@
         </div>
       </footer>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <!-- <script src="https://unpkg.com/scrollbooster@3/dist/scrollbooster.min.js" ></script> -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"></script>
     <script src="./asset/compoents/nouislider.min.js"></script>
     <script src="./asset/compoents/rangesliderAlone.js"></script>
     <script src="./asset/app.js"></script>

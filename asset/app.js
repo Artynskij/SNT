@@ -211,17 +211,24 @@ const progressBlock = document.querySelector(".progress");
 
 const progressDots = progressBlock.querySelectorAll(".switch-item");
 const progressContents = progressBlock.querySelectorAll(".progress-content");
-progressDots.forEach(item => item.addEventListener('click', ()=> {toggleProgressContent()}));
+progressDots.forEach((item) =>
+  item.addEventListener("click", () => {
+    toggleProgressContent();
+  })
+);
 toggleProgressContent();
 function toggleProgressContent() {
   progressDots.forEach((dotNode) => {
     if (dotNode.className.includes("active")) {
-      progressContents.forEach(contentNode => {
-        contentNode.classList.remove('active')
-        if(contentNode.attributes["data-content"].value === dotNode.attributes["key-content"].value){
-          contentNode.classList.add('active')
+      progressContents.forEach((contentNode) => {
+        contentNode.classList.remove("active");
+        if (
+          contentNode.attributes["data-content"].value ===
+          dotNode.attributes["key-content"].value
+        ) {
+          contentNode.classList.add("active");
         }
-      })
+      });
       console.log(dotNode.attributes["key-content"].value);
     }
   });
@@ -235,27 +242,70 @@ const planSwitchDots = planBlock.querySelector(".plan-switch--dots");
 const planDots = planSwitchDots.querySelectorAll(".switch-item");
 const planContent = planBlock.querySelectorAll(".plan-card");
 console.log(planDots);
-planDots.forEach(item => item.addEventListener('click', ()=> {togglePlanContent()}));
+planDots.forEach((item) =>
+  item.addEventListener("click", () => {
+    togglePlanContent();
+  })
+);
 togglePlanContent();
 
 function togglePlanContent() {
   planDots.forEach((dotNode) => {
-    
     if (dotNode.className.includes("active")) {
-      planContent.forEach(contentNode => {
-        contentNode.classList.remove('active')
-        if(contentNode.attributes["data-content"].value === dotNode.attributes["key-content"].value){
-          contentNode.classList.add('active')
+      planContent.forEach((contentNode) => {
+        contentNode.classList.remove("active");
+        if (
+          contentNode.attributes["data-content"].value ===
+          dotNode.attributes["key-content"].value
+        ) {
+          contentNode.classList.add("active");
         }
-      })
+      });
       console.log(dotNode.attributes["key-content"].value);
     }
   });
 }
 
+//  maps --------------------------------------------------------------
 
-//  Block credit --------------------------------------------------------------
+const scroollBlocks = document.querySelectorAll("#horizontal-scroller");
+window.onload = function () {
+  // let scr1 = $("#horizontal-scroller");
+  mouseEvent($("#horizontal-scroller"))
+  mouseEvent($("#horizontal-scroller2"))
+  mouseEvent($("#horizontal-scroller3"))
+  // scroollBlocks.forEach((scr) => {mouseEvent(scr)});
+  function mouseEvent(scr) {
+    let currentSrc;
 
+    scr.mousedown(function (e) {
+      currentSrc = e.targetEvent;
+    });
 
-const rangeSliderCredit = document.getElementById("range-slider--creditcost");
+    scr.mouseup(function (e) {
+      if (e.targetEvent !== currentSrc) {
+        e.preventDefault ? e.preventDefault() : (e.cancelBubble = true);
 
+        return false;
+      }
+    });
+
+    scr.mousedown(function () {
+      let startX = this.scrollLeft + event.pageX;
+
+      let startY = this.scrollTop + event.pageY;
+
+      scr.mousemove(function () {
+        this.scrollLeft = startX - event.pageX;
+
+        this.scrollTop = startY - event.pageY;
+
+        return false;
+      });
+    });
+
+    $(window).mouseup(function () {
+      scr.off("mousemove");
+    });
+  }
+};
