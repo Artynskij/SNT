@@ -93,30 +93,122 @@ function contentHidden(newsCards) {
 
 const sectionNews = document.querySelector(".news");
 
-const newsDots = sectionNews.querySelectorAll(".switch-item");
-const newsContents = sectionNews.querySelectorAll(".news-content--block");
+if (sectionNews) {
+  const newsDots = sectionNews.querySelectorAll(".switch-item");
+  const newsContents = sectionNews.querySelectorAll(".news-content--block");
 
-newsContents.forEach((item) => logicNewsPage(item));
+  newsContents.forEach((item) => logicNewsPage(item));
 
-newsDots.forEach((item) =>
-  item.addEventListener("click", () => {
-    toggleProgressContent();
-  })
-);
-toggleProgressContent();
-function toggleProgressContent() {
-  newsDots.forEach((dotNode) => {
-    if (dotNode.className.includes("active")) {
-      newsContents.forEach((contentNode) => {
-        contentNode.classList.remove("active");
-        if (
-          contentNode.attributes["data-switch"].value ===
-          dotNode.attributes["key-switch"].value
-        ) {
-          contentNode.classList.add("active");
-        }
-      });
-      console.log(dotNode.attributes["key-switch"].value);
+  newsDots.forEach((item) =>
+    item.addEventListener("click", () => {
+      toggleProgressContent();
+    })
+  );
+  toggleProgressContent();
+  function toggleProgressContent() {
+    newsDots.forEach((dotNode) => {
+      if (dotNode.className.includes("active")) {
+        newsContents.forEach((contentNode) => {
+          contentNode.classList.remove("active");
+          if (
+            contentNode.attributes["data-switch"].value ===
+            dotNode.attributes["key-switch"].value
+          ) {
+            contentNode.classList.add("active");
+          }
+        });
+        console.log(dotNode.attributes["key-switch"].value);
+      }
+    });
+  }
+}
+const sectionDocument = document.querySelector(".document");
+
+if (sectionDocument) {
+  const documnetDots = sectionDocument.querySelectorAll(".switch-item");
+  const documnetContents = sectionDocument.querySelectorAll(".document__card");
+  const documnetButton = sectionDocument.querySelector(".document-button");
+
+  let falseInnerButtonDocument = " ";
+  //   documnetContents.forEach((item) => logicdocumnetPage(item));
+
+  documnetDots.forEach((item) =>
+    item.addEventListener("click", () => {
+      toggleDocumentContent();
+    })
+  );
+  toggleDocumentContent();
+  documnetButton.addEventListener("click", () => {
+    if (documnetButton.attributes["contentActive"].value === "true") {
+      documnetButton.attributes["contentActive"].value = "false";
+      toggleDocumentContent();
+    } else {
+      documnetButton.attributes["contentActive"].value = "true";
+      toggleDocumentContent();
     }
   });
+  function toggleDocumentContent() {
+    let countContent = 0;
+    documnetDots.forEach((dotNode) => {
+      if (dotNode.className.includes("active")) {
+        documnetContents.forEach((contentNode) => {
+          contentNode.classList.remove("active");
+          if (dotNode.attributes["key-switch"].value === "all") {
+            countContent++;
+            contentNode.classList.add("active");
+            return;
+          }
+          if (
+            contentNode.attributes["data-switch"].value ===
+            dotNode.attributes["key-switch"].value
+          ) {
+            countContent++;
+            contentNode.classList.add("active");
+          }
+        });
+        calcInnerButton();
+      }
+    });
+  }
+  function calcInnerButton() {
+    if (documnetButton.attributes["contentActive"].value === "true") {
+      console.log(documnetContents.length);
+      falseInnerButtonDocument = `Закрыть`;
+      documnetButton.innerHTML = falseInnerButtonDocument;
+      let countContent = 0;
+      documnetContents.forEach((itemDoc, index) => {
+        if (itemDoc.className.includes("active")) {
+          countContent++;
+        //   if (countContent > 8) {
+        //     itemDoc.classList.remove("active");
+        //   }
+        }
+      });
+      if (countContent <= 8) {
+        console.log("documnetContents.length");
+        documnetButton.style.display = "none";
+      } else{
+        documnetButton.style.display = "block"
+      }
+    } else {
+      let countContent = 0;
+      documnetContents.forEach((itemDoc, index) => {
+        if (itemDoc.className.includes("active")) {
+          countContent++;
+          if (countContent > 8) {
+            itemDoc.classList.remove("active");
+          }
+        }
+      });
+      if (countContent > 8) {
+        documnetButton.style.display = "block";
+        falseInnerButtonDocument = `Показать еще <span>${
+          countContent - 8
+        } док.</span>`;
+        documnetButton.innerHTML = falseInnerButtonDocument;
+      } else {
+        documnetButton.style.display = "none";
+      }
+    }
+  }
 }

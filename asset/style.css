@@ -149,7 +149,7 @@ h3 {
   margin: 0 auto;
 }
 section {
-  padding: 64px 0;
+  padding: 32px 0;
 }
 .section-title {
   margin-bottom: 34px;
@@ -179,4 +179,17 @@ section {
 #horizontal-scroller4,
 #horizontal-scroller5 {
   cursor: grab;
+}
+
+
+@media ((max-width: 1000px)) {
+  section {
+    padding: 16px 0;
+  }
+}
+
+@media ((max-width: 570px)) {
+  section {
+    padding: 8px 0;
+  }
 }
