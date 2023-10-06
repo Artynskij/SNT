@@ -49,6 +49,7 @@
 .nav-item--else {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .nav-item--else img {
@@ -90,6 +91,23 @@
   width: 16px;
 }
 
+.else-block {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+}
+.nav-item--else:hover .else-block {
+  display: block;
+}
+.else-block .nav-item {
+  margin: 5px;
+  width: fit-content;
+  text-wrap: nowrap;
+}
 /*----------------- burger ------------------- */
 
 .burger {
@@ -212,6 +230,9 @@
     padding: 20px 30px;
     border-bottom: 1px solid var(--second-text);
     font-size: 20px;
+  }
+  .else-block {
+    background-color: black;
   }
 }
 
@@ -546,6 +567,7 @@
 }
 
 .news-switch {
+  width: fit-content;
   display: flex;
   border-radius: 7px;
   overflow: hidden;
