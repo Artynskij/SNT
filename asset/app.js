@@ -229,7 +229,6 @@ function toggleProgressContent() {
           contentNode.classList.add("active");
         }
       });
-      console.log(dotNode.attributes["key-content"].value);
     }
   });
 }
@@ -271,9 +270,9 @@ function togglePlanContent() {
 const scroollBlocks = document.querySelectorAll("#horizontal-scroller");
 window.onload = function () {
   // let scr1 = $("#horizontal-scroller");
-  mouseEvent($("#horizontal-scroller"))
-  mouseEvent($("#horizontal-scroller2"))
-  mouseEvent($("#horizontal-scroller3"))
+  mouseEvent($("#horizontal-scroller"));
+  mouseEvent($("#horizontal-scroller2"));
+  mouseEvent($("#horizontal-scroller3"));
   // scroollBlocks.forEach((scr) => {mouseEvent(scr)});
   function mouseEvent(scr) {
     let currentSrc;

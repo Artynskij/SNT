@@ -156,9 +156,14 @@
   .nav-list {
     flex-direction: column;
     align-items: end;
+    background-color: #171817cc;
   }
 
   .nav-item {
+    color: #fff;
+  }
+  .nav-item {
+    color: #fff;
     /* width: 100%; */
     padding: 10px 30px;
   }
@@ -857,7 +862,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
- 
+
   padding: 32px;
   border-radius: 10px;
   max-height: 416px;
@@ -1093,7 +1098,7 @@
 
 .credit-content {
 }
-.credit-calculator{
+.credit-calculator {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -1110,45 +1115,42 @@
   border: 1px solid grey;
   border-radius: 10px;
   cursor: pointer;
-  transition: all .2s;
+  transition: all 0.2s;
 }
-.credit-calculator__title img:hover{
+.credit-calculator__title img:hover {
   transform: scale(1.05);
 }
-.credit-calculator__ranges{
+.credit-calculator__ranges {
   display: grid;
 }
-.credit-calculator__ranges-cost{
-
+.credit-calculator__ranges-cost {
 }
-.credit-calculator__ranges-initial{
-  
+.credit-calculator__ranges-initial {
 }
-.credit-calculator__ranges-term{
-  
+.credit-calculator__ranges-term {
 }
-.credit-calculator__ranges-title{
-  color: #6C757D;
+.credit-calculator__ranges-title {
+  color: #6c757d;
   font-size: 12px;
   font-weight: 400;
   margin-bottom: 8px;
 }
-.credit-calculator__button{
-  background-color: #2E7A6E;
+.credit-calculator__button {
+  background-color: #2e7a6e;
   color: #fff;
   padding: 22px 20px;
   border-radius: 10px;
   text-align: center;
   cursor: pointer;
-  transition: all .2s;
+  transition: all 0.2s;
 }
-.credit-calculator__button:hover{
+.credit-calculator__button:hover {
   transform: scale(1.02);
 }
-.credit-calculator__underbutton{
+.credit-calculator__underbutton {
   font-size: 12px;
   font-weight: 400;
-  color: #6C757D;
+  color: #6c757d;
 }
 .credit-offer {
 }
@@ -1415,7 +1417,7 @@
   padding: 21px 32px;
   padding-right: 70px;
   border-radius: 8px;
-  
+
   border: 2px solid #a6b1b9;
 }
 
