@@ -138,6 +138,7 @@ if (sectionDocument) {
     })
   );
   toggleDocumentContent();
+
   documnetButton.addEventListener("click", () => {
     if (documnetButton.attributes["contentActive"].value === "true") {
       documnetButton.attributes["contentActive"].value = "false";
@@ -147,6 +148,7 @@ if (sectionDocument) {
       toggleDocumentContent();
     }
   });
+
   function toggleDocumentContent() {
     let countContent = 0;
     documnetDots.forEach((dotNode) => {
@@ -179,16 +181,16 @@ if (sectionDocument) {
       documnetContents.forEach((itemDoc, index) => {
         if (itemDoc.className.includes("active")) {
           countContent++;
-        //   if (countContent > 8) {
-        //     itemDoc.classList.remove("active");
-        //   }
+          //   if (countContent > 8) {
+          //     itemDoc.classList.remove("active");
+          //   }
         }
       });
       if (countContent <= 8) {
         console.log("documnetContents.length");
         documnetButton.style.display = "none";
-      } else{
-        documnetButton.style.display = "block"
+      } else {
+        documnetButton.style.display = "block";
       }
     } else {
       let countContent = 0;
