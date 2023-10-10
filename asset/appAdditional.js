@@ -214,3 +214,49 @@ if (sectionDocument) {
     }
   }
 }
+
+// -----------
+const scroollBlocks = document.querySelectorAll("#horizontal-scroller");
+if (scroollBlocks) {
+  window.onload = function () {
+    // let scr1 = $("#horizontal-scroller");
+    // mouseEvent($("#horizontal-scroller"));
+    // mouseEvent($("#horizontal-scroller2"));
+    // mouseEvent($("#horizontal-scroller3"));
+    mouseEvent($("#horizontal-scroller4"));
+    // scroollBlocks.forEach((scr) => {mouseEvent(scr)});
+    function mouseEvent(scr) {
+      let currentSrc;
+
+      scr.mousedown(function (e) {
+        currentSrc = e.targetEvent;
+      });
+
+      scr.mouseup(function (e) {
+        if (e.targetEvent !== currentSrc) {
+          e.preventDefault ? e.preventDefault() : (e.cancelBubble = true);
+
+          return false;
+        }
+      });
+
+      scr.mousedown(function () {
+        let startX = this.scrollLeft + event.pageX;
+
+        let startY = this.scrollTop + event.pageY;
+
+        scr.mousemove(function () {
+          this.scrollLeft = startX - event.pageX;
+
+          this.scrollTop = startY - event.pageY;
+
+          return false;
+        });
+      });
+
+      $(window).mouseup(function () {
+        scr.off("mousemove");
+      });
+    }
+  };
+}

@@ -265,7 +265,7 @@ function togglePlanContent() {
   });
 }
 
-//  maps --------------------------------------------------------------
+//  horizontal-scroller --------------------------------------------------------------
 
 const scroollBlocks = document.querySelectorAll("#horizontal-scroller");
 window.onload = function () {
@@ -273,6 +273,7 @@ window.onload = function () {
   mouseEvent($("#horizontal-scroller"));
   mouseEvent($("#horizontal-scroller2"));
   mouseEvent($("#horizontal-scroller3"));
+  mouseEvent($("#horizontal-scroller4"));
   // scroollBlocks.forEach((scr) => {mouseEvent(scr)});
   function mouseEvent(scr) {
     let currentSrc;
@@ -308,3 +309,49 @@ window.onload = function () {
     });
   }
 };
+
+// modals -------------------------------------------------------------
+const btns = document.querySelectorAll(".open-modal");
+const modalOverlay = document.querySelector(".modal-overlay ");
+const modals = document.querySelectorAll(".modal");
+const btnsClose = document.querySelectorAll(".modal-close");
+
+btns.forEach((el) => {
+  el.addEventListener("click", (e) => {
+    let path = e.currentTarget.getAttribute("data-path");
+
+    modals.forEach((el) => {
+      el.classList.remove("modal--visible");
+    });
+    console.log(body.offsetWidth);
+    body.style.overflow = 'hidden'
+    body.style.paddingRight = '10px'
+    console.log(body.offsetWidth);
+    document
+      .querySelector(`[data-target="${path}"]`)
+      .classList.add("modal--visible");
+    modalOverlay.classList.add("modal-overlay--visible");
+  });
+});
+btnsClose.forEach((el) => {
+  el.addEventListener("click", () => {
+    modalOverlay.classList.remove("modal-overlay--visible");
+    modals.forEach((el) => {
+      body.style.overflow = 'auto'
+      body.style.paddingRight = '0'
+      el.classList.remove("modal--visible");
+    });
+  });
+});
+modalOverlay.addEventListener("click", (e) => {
+  console.log(e.target);
+
+  if (e.target == modalOverlay) {
+    body.style.overflow = 'auto'
+    body.style.paddingRight = '0'
+    modalOverlay.classList.remove("modal-overlay--visible");
+    modals.forEach((el) => {
+      el.classList.remove("modal--visible");
+    });
+  }
+});
