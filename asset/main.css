@@ -768,7 +768,7 @@
 .environment-map__item {
   position: absolute;
   cursor: pointer;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 .environment-map__item:hover {
   transform: scale(1.04);
@@ -1440,21 +1440,26 @@
 }
 
 .credit-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
 }
 .credit-calculator {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 20px;
 }
 
 .credit-calculator__title {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .credit-calculator__title span {
 }
 .credit-calculator__title img {
-  padding: 15px;
+  padding: 8px;
   border: 1px solid grey;
   border-radius: 10px;
   cursor: pointer;
@@ -1462,15 +1467,25 @@
 }
 .credit-calculator__title img:hover {
   transform: scale(1.05);
+  background-color: #aaa9a9;
 }
 .credit-calculator__ranges {
   display: grid;
+  row-gap: 34px;
+  column-gap: 16px;
+  grid-template-columns: 2fr 1fr;
 }
 .credit-calculator__ranges-cost {
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 .credit-calculator__ranges-initial {
+  grid-column-start: 1;
+  grid-column-end: 2;
 }
 .credit-calculator__ranges-term {
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 .credit-calculator__ranges-title {
   color: #6c757d;
@@ -1486,6 +1501,7 @@
   text-align: center;
   cursor: pointer;
   transition: all 0.2s;
+  margin-bottom: 16px;
 }
 .credit-calculator__button:hover {
   transform: scale(1.02);
@@ -1497,11 +1513,165 @@
 }
 .credit-offer {
 }
-
-@media ((max-width: 1000px)) {
+.credit-offer__title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+.credit-offer__title > div {
+  display: flex;
+  align-items: center;
+}
+.credit-offer__title > div > div {
+  display: flex;
+  align-items: center;
+}
+.credit-offer__title > div img {
+  margin: 0 10px;
+}
+.credit-offer__pizdez {
+  font-weight: 400;
+  font-size: 12px;
+  color: #6c757d;
+  text-wrap: nowrap;
+}
+.credit-offer__title button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+}
+.credit-offer__title button:hover {
+  transform: scale(1.04);
+}
+.credit-offer__title button img {
+  margin-left: 10px;
+  transform: rotate(-90deg);
 }
 
-@media ((max-width: 570px)) {
+.credit-offer__credit {
+  border: 1px solid #d9dfe3;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.credit-offer__credit-title {
+  padding: 32px;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr 3fr;
+  border-bottom: 1px solid #d9dfe3;
+}
+.credit-offer__credit-title h3 {
+  text-wrap: nowrap;
+}
+.credit-offer__credit-switch {
+  display: flex;
+  gap: 8px;
+}
+.credit-offer__credit-switch .switch-item {
+  color: #6c757d;
+  padding: 7px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+.credit-offer__credit-list {
+  overflow: auto;
+  max-height: 388px;
+}
+.credit-offer__credit-item {
+  border-bottom: 1px solid #d9dfe3;
+  /* border-top: 1px solid #D9DFE3; */
+  padding: 24px 32px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+}
+
+.credit-offer__credit-item:last-child {
+  border-bottom: none;
+}
+.credit-offer__credit-bank {
+  display: flex;
+  align-items: center;
+}
+.credit-offer__credit-bank img {
+  margin-right: 15px;
+}
+.credit-offer__credit-bank span {
+}
+.credit-offer__credit-data {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.credit-offer__credit-data-pay {
+}
+.credit-offer__credit-data-pay span {
+  font-weight: 400;
+  font-size: 12px;
+  color: #6c757d;
+}
+.credit-offer__credit-data-pay div {
+}
+.credit-offer__credit-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.credit-offer__credit-button span {
+  font-size: 12px;
+  font-weight: 400;
+  color: #6c757d;
+  /* text-wrap: nowrap; */
+}
+.credit-offer__credit-button img {
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.credit-offer__credit-button img:hover {
+  transform: scale(1.04);
+  background-color: #aaa9a9;
+}
+@media ((max-width: 1000px)) {
+  .credit-content {
+    grid-template-columns: 1fr;
+  }
+  .credit-offer__pizdez {
+    display: none !important;
+  }
+}
+
+@media ((max-width: 700px)) {
+  .credit-offer__credit-title {
+    grid-template-columns: 1fr;
+  }
+  .credit-offer__credit-title {
+    padding: 32px 15px;
+  }
+
+  .credit-offer__credit-item {
+    padding: 24px 15px;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .credit-offer__credit-data {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .credit-offer__credit-button {
+    justify-content: end;
+    gap: 10px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
 }
 
 /*------------------------------- progress ------------------------------- */
@@ -1960,10 +2130,10 @@
 .modal--visible {
   display: block;
 }
-.modal-environment .modal-close{
+.modal-environment .modal-close {
   /* color: #fff; */
   padding: 5px 10px;
-  background-color: #FFF;
+  background-color: #fff;
 }
 .modal-close {
   position: absolute;

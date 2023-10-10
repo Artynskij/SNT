@@ -59,7 +59,7 @@ let valueElementCreditCost = document.querySelector(
 const optionsCreditCost = {
   min: 1000000,
   max: 30000000,
-  cur: 5000000,
+  cur: 1000000,
   afterNumber: " ₽",
 };
 
@@ -83,7 +83,7 @@ let valueElementCreditInitial = document.querySelector(
 let optionsCreditInitial = {
   min: 1000000,
   max: 15000000,
-  cur: 7000000,
+  cur: 1000000,
   afterNumber: " ₽",
 };
 
@@ -109,7 +109,7 @@ let valueElementCreditTerm = document.querySelector(
 let optionsCreditTerm = {
   min: 5,
   max: 50,
-  cur: 30,
+  cur: 5,
   afterNumber: " лет",
 };
 
