@@ -274,6 +274,8 @@ window.onload = function () {
   mouseEvent($("#horizontal-scroller2"));
   mouseEvent($("#horizontal-scroller3"));
   mouseEvent($("#horizontal-scroller4"));
+  mouseEvent($("#horizontal-scroller5"));
+  mouseEvent($("#horizontal-scroller6"));
   // scroollBlocks.forEach((scr) => {mouseEvent(scr)});
   function mouseEvent(scr) {
     let currentSrc;

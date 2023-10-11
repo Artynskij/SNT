@@ -549,6 +549,7 @@
     gap: 32px;
   }
   .form-title {
+    font-size: 20px;
     max-width: 420px;
     grid-column-start: 1;
     grid-column-end: 2;
@@ -683,6 +684,9 @@
   color: #6c757d;
   cursor: pointer;
   transition: all 0.2s;
+}
+.card-button__item a{
+  color:#6c757d;
 }
 .card-button__item:hover {
   transform: scale(1.03);
