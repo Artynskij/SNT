@@ -260,3 +260,14 @@ if (scroollBlocks) {
     }
   };
 }
+
+function changeQr() {
+  const qr = document.querySelector(".map-qr");
+  const qrImg = qr?.querySelector("img");
+  const qrText = qr.querySelector(".qr-text--block");
+  if (window.innerWidth < 520) {
+    qrImg.src = '/asset/img/yandex.png'
+    qrText.innerHTML = "Я.Карты"
+  }
+}
+changeQr()
