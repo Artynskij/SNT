@@ -326,8 +326,8 @@ btns.forEach((el) => {
       el.classList.remove("modal--visible");
     });
     console.log(body.offsetWidth);
-    body.style.overflow = 'hidden'
-    body.style.paddingRight = '10px'
+    body.style.overflow = "hidden";
+    body.style.paddingRight = "10px";
     console.log(body.offsetWidth);
     document
       .querySelector(`[data-target="${path}"]`)
@@ -339,8 +339,8 @@ btnsClose.forEach((el) => {
   el.addEventListener("click", () => {
     modalOverlay.classList.remove("modal-overlay--visible");
     modals.forEach((el) => {
-      body.style.overflow = 'auto'
-      body.style.paddingRight = '0'
+      body.style.overflow = "auto";
+      body.style.paddingRight = "0";
       el.classList.remove("modal--visible");
     });
   });
@@ -349,11 +349,29 @@ modalOverlay.addEventListener("click", (e) => {
   console.log(e.target);
 
   if (e.target == modalOverlay) {
-    body.style.overflow = 'auto'
-    body.style.paddingRight = '0'
+    body.style.overflow = "auto";
+    body.style.paddingRight = "0";
     modalOverlay.classList.remove("modal-overlay--visible");
     modals.forEach((el) => {
       el.classList.remove("modal--visible");
     });
   }
 });
+
+// change qr
+// if (
+//   document.querySelector("#main-page") ||
+//   document.querySelector("#contact-page")
+// ) {
+
+function changeQr() {
+  const qr = document.querySelector(".map-qr");
+  const qrImg = qr?.querySelector("img");
+  const qrText = qr.querySelector(".qr-text--block");
+  if (window.innerWidth < 520) {
+    qrImg.src = "/asset/img/yandex.png";
+    qrText.innerHTML = "Я.Карты";
+  }
+}
+changeQr();
+// }
